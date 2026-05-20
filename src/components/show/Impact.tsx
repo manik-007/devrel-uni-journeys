@@ -18,9 +18,9 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 }
 
 const stats = [
-  { value: 3, label: "Episodes recorded", suffix: "" },
-  { value: 3, label: "Inspiring guests", suffix: "" },
-  { value: 2, label: "Countries represented", suffix: "" },
+  { value: 13, label: "Episodes recorded", suffix: "" },
+  { value: 13, label: "Inspiring guests", suffix: "" },
+  { value: 7, label: "Countries represented", suffix: "" },
   { value: 1, label: "Cohort, infinite stories", suffix: "" },
 ];
 
