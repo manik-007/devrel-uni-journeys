@@ -43,11 +43,11 @@ export function Hero() {
           </div>
 
           <div className="mt-10 flex items-center gap-8 text-sm text-muted-foreground">
-            <Stat label="Episodes" value="3" />
+            <Stat label="Episodes" value="13" />
             <span className="h-8 w-px bg-border" />
-            <Stat label="Guests" value="3" />
+            <Stat label="Guests" value="13" />
             <span className="h-8 w-px bg-border" />
-            <Stat label="Countries" value="2" />
+            <Stat label="Countries" value="7" />
           </div>
         </motion.div>
 
