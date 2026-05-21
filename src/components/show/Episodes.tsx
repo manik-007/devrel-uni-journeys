@@ -71,7 +71,7 @@ const episodes: Episode[] = [
     blurb:
       "Turning deep technical work into stories developers actually want to read.",
     image: atharva,
-    youtube: "#",
+    youtube: "https://youtu.be/k7vxMo_dl2o?si=TrpcGSOMorT9555r",
     linkedin: "https://www.linkedin.com/in/atharva-shah-tech/",
   },
   {
@@ -82,7 +82,7 @@ const episodes: Episode[] = [
     blurb:
       "Shipping smart contracts and full-stack experiences from India's startup capital.",
     image: jay,
-    youtube: "#",
+    youtube: "https://youtu.be/V3weSaIJNKo?si=R8uugnloZMcfrDJH",
     linkedin: "https://www.linkedin.com/in/jay-makwana-313b411a5/",
   },
   {
