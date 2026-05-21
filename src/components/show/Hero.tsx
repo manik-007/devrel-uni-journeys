@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Play, Sparkles, ArrowDown } from "lucide-react";
+import { Play, ArrowDown } from "lucide-react";
 
 export function Hero() {
   return (
