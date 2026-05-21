@@ -86,18 +86,6 @@ const episodes: Episode[] = [
     linkedin: "https://www.linkedin.com/in/jay-makwana-313b411a5/",
   },
   {
-    number: "06",
-    name: "Purple Zhang",
-    role: "Developer Relations @ SECBIT Labs · Prev Antalpha, SocialWiki",
-    location: "Suzhou, Jiangsu, China",
-    blurb:
-      "Bridging developer ecosystems across Asia with a love for community-driven Web3.",
-    image: purple,
-    youtube: "#",
-    linkedin: "https://www.linkedin.com/in/purple-zhang-7b0673180/",
-    twitter: "https://x.com/ziyinlox",
-  },
-  {
     number: "07",
     name: "Yerang Kim",
     role: "Secretary, Northern European Chapter · Global Advisor, PUAC",
