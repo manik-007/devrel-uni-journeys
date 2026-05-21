@@ -12,6 +12,7 @@ import dayana from "@/assets/guests/dayana.jpg";
 import parul from "@/assets/guests/parul.jpg";
 import hardik from "@/assets/guests/hardik.jpg";
 import kevin from "@/assets/guests/kevin.jpg";
+import hilina from "@/assets/guests/hilina.jpg";
 
 type Episode = {
   number: string;
@@ -161,6 +162,7 @@ const episodes: Episode[] = [
     location: "Addis Ababa, Ethiopia",
     blurb:
       "Driving Web3 adoption and smart-city innovation across East Africa.",
+    image: hilina,
     linkedin: "https://www.linkedin.com/in/hilina-damte-532751158/",
     twitter: "https://x.com/decentralizeEA",
     youtube: "#",
