@@ -71,7 +71,7 @@ const episodes: Episode[] = [
     blurb:
       "Turning deep technical work into stories developers actually want to read.",
     image: atharva,
-    youtube: "#",
+    youtube: "https://youtu.be/k7vxMo_dl2o?si=TrpcGSOMorT9555r",
     linkedin: "https://www.linkedin.com/in/atharva-shah-tech/",
   },
   {
@@ -82,23 +82,11 @@ const episodes: Episode[] = [
     blurb:
       "Shipping smart contracts and full-stack experiences from India's startup capital.",
     image: jay,
-    youtube: "#",
+    youtube: "https://youtu.be/V3weSaIJNKo?si=R8uugnloZMcfrDJH",
     linkedin: "https://www.linkedin.com/in/jay-makwana-313b411a5/",
   },
   {
     number: "06",
-    name: "Purple Zhang",
-    role: "Developer Relations @ SECBIT Labs · Prev Antalpha, SocialWiki",
-    location: "Suzhou, Jiangsu, China",
-    blurb:
-      "Bridging developer ecosystems across Asia with a love for community-driven Web3.",
-    image: purple,
-    youtube: "#",
-    linkedin: "https://www.linkedin.com/in/purple-zhang-7b0673180/",
-    twitter: "https://x.com/ziyinlox",
-  },
-  {
-    number: "07",
     name: "Yerang Kim",
     role: "Secretary, Northern European Chapter · Global Advisor, PUAC",
     location: "Berlin, Germany",
@@ -109,7 +97,7 @@ const episodes: Episode[] = [
     linkedin: "https://www.linkedin.com/in/yerang-kim/",
   },
   {
-    number: "08",
+    number: "07",
     name: "Alex Stoicescu",
     role: "Advisor @ Claimr · Ex-Communications Lead @ Request Network",
     location: "Berlin Metropolitan Area",
@@ -121,7 +109,7 @@ const episodes: Episode[] = [
     twitter: "https://x.com/st0icescu",
   },
   {
-    number: "09",
+    number: "08",
     name: "Dayana Mick Forero",
     role: "Fellow @ Dev3Pack · Member @ DevRel Uni",
     location: "Berlin, Germany",
@@ -133,7 +121,7 @@ const episodes: Episode[] = [
     twitter: "https://x.com/AydaMacink",
   },
   {
-    number: "10",
+    number: "09",
     name: "Parul Yadav",
     role: "DevRel @ Kleros · Ex-Nethermind · Ex-Accenture",
     location: "India",
@@ -144,7 +132,7 @@ const episodes: Episode[] = [
     linkedin: "https://www.linkedin.com/in/parulyadav18/",
   },
   {
-    number: "11",
+    number: "10",
     name: "Hardik Bandhiya",
     role: "AWS Campus Leader · Member @ DevRel Uni",
     location: "Junagarh, Gujarat, India",
@@ -156,7 +144,7 @@ const episodes: Episode[] = [
     twitter: "https://x.com/bandhiyahardik8",
   },
   {
-    number: "12",
+    number: "11",
     name: "Hilina Damte",
     role: "Partner @ PayWay · Co-Founder @ mereb.dev · Advisor @ P3 Smart City",
     location: "Addis Ababa, Ethiopia",
@@ -168,7 +156,7 @@ const episodes: Episode[] = [
     youtube: "#",
   },
   {
-    number: "13",
+    number: "12",
     name: "Kevin Raúl Padilla Islas",
     role: "CTO @ EVVM · Core Team @ Her DAO Mexico",
     location: "Puebla Metropolitan Area",
@@ -178,6 +166,18 @@ const episodes: Episode[] = [
     youtube: "#",
     linkedin: "https://www.linkedin.com/in/kevin-padilla-islas/",
     twitter: "https://x.com/jistro",
+  },
+  {
+    number: "13",
+    name: "Purple Zhang",
+    role: "Developer Relations @ SECBIT Labs · Prev Antalpha, SocialWiki",
+    location: "Suzhou, Jiangsu, China",
+    blurb:
+      "Bridging developer ecosystems across Asia with a love for community-driven Web3.",
+    image: purple,
+    youtube: "#",
+    linkedin: "https://www.linkedin.com/in/purple-zhang-7b0673180/",
+    twitter: "https://x.com/ziyinlox",
   },
 ];
 
@@ -229,7 +229,7 @@ export function Episodes() {
                     src={ep.image}
                     alt={ep.name}
                     loading="lazy"
-                    className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 ) : (
                   <Initials name={ep.name} />

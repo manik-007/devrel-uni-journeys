@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Play, Sparkles, ArrowDown } from "lucide-react";
+import { Play, ArrowDown } from "lucide-react";
 
 export function Hero() {
   return (
@@ -30,15 +30,6 @@ export function Hero() {
       </div>
 
       <div className="relative mx-auto max-w-5xl px-6 text-center">
-        <motion.span
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs text-muted-foreground backdrop-blur"
-        >
-          <Sparkles className="h-3.5 w-3.5 text-primary" />
-          A DevRel Uni Cohort 7 initiative
-        </motion.span>
 
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
