@@ -44,7 +44,7 @@ const episodes: Episode[] = [
     number: "02",
     name: "Lupe Canaviri Maydana",
     role: "Ex-Frontend Engineer @ Microsoft · Community Builder",
-    location: "Seattle, Washington",
+    location: "Seattle, Washington, USA",
     blurb:
       "Filmmaker, gymnast, and educator teaching the women of Bolivia about crypto — a truly meaningful conversation.",
     image: lupe,
@@ -94,14 +94,14 @@ const episodes: Episode[] = [
     blurb:
       "Connecting policy, peace and tech across continents from her base in Berlin.",
     image: yerang,
-    youtube: "#",
+    youtube: "https://youtu.be/K2SGlXTVerI?si=wftbjr1dU1wyTCUZ",
     linkedin: "https://www.linkedin.com/in/yerang-kim/",
   },
   {
     number: "07",
     name: "Alex Stoicescu",
     role: "Advisor @ Claimr · Ex-Communications Lead @ Request Network",
-    location: "Berlin Metropolitan Area",
+    location: "Berlin, Germany",
     blurb:
       "A storyteller who shapes how Web3 brands talk to the world.",
     image: alex,
@@ -160,7 +160,7 @@ const episodes: Episode[] = [
     number: "12",
     name: "Kevin Raúl Padilla Islas",
     role: "CTO @ EVVM · Core Team @ Her DAO Mexico",
-    location: "Puebla Metropolitan Area",
+    location: "Puebla, Mexico",
     blurb:
       "Building protocols and lifting up the next generation of women in Web3 in Mexico.",
     image: kevin,
