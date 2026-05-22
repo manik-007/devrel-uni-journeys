@@ -165,6 +165,7 @@ const episodes: Episode[] = [
     blurb:
       "Building protocols and lifting up the next generation of women in Web3 in Mexico.",
     image: kevin,
+    image: mahima,
     youtube: "#",
     linkedin: "https://www.linkedin.com/in/kevin-padilla-islas/",
     twitter: "https://x.com/jistro",
