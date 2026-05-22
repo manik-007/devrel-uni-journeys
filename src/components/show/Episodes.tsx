@@ -180,6 +180,29 @@ const episodes: Episode[] = [
     linkedin: "https://www.linkedin.com/in/purple-zhang-7b0673180/",
     twitter: "https://x.com/ziyinlox",
   },
+  {
+    number: "14",
+    name: "Mahima Thacker",
+    role: "SheFi 11 · Ambassador @ Cyfrin & H.E.R. DAO · Mentor @ Dev3Pack & ETHGlobal",
+    location: "Bhuj, Gujarat, India",
+    blurb:
+      "Wearing many hats across Web3 — from ambassador to mentor to contributor.",
+    youtube: "#",
+    linkedin: "https://www.linkedin.com/in/mahima-thacker-b696b1217/",
+    twitter: "https://x.com/mahima_thacker",
+  },
+  {
+    number: "15",
+    name: "Gopika Chauhan",
+    role: "Builder · Community Contributor · DevRel Uni Cohort 7",
+    location: "Karnal, Haryana, India",
+    blurb:
+      "Championing access to Web3 for developers beyond the usual metros.",
+    image: gopika,
+    youtube: "#",
+    linkedin: "https://www.linkedin.com/in/gopika-chauhan18/",
+    twitter: "https://x.com/okgopika",
+  },
 ];
 
 function Initials({ name }: { name: string }) {
@@ -209,7 +232,7 @@ export function Episodes() {
             </h2>
           </div>
           <p className="text-muted-foreground max-w-sm">
-            Thirteen episodes, thirteen perspectives, thirteen different
+            Fifteen episodes, fifteen perspectives, fifteen different
             corners of the DevRel world.
           </p>
         </div>
