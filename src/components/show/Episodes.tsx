@@ -14,6 +14,7 @@ import hardik from "@/assets/guests/hardik.jpg";
 import kevin from "@/assets/guests/kevin.jpg";
 import hilina from "@/assets/guests/hilina.jpg";
 import gopika from "@/assets/guests/gopika.jpg";
+import mahima from "@/assets/guests/mahima.jpg";
 
 type Episode = {
   number: string;
