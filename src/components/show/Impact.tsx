@@ -18,10 +18,10 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 }
 
 const stats = [
-  { value: 13, label: "Episodes recorded", suffix: "" },
-  { value: 13, label: "Inspiring guests", suffix: "" },
+  { value: 15, label: "Episodes recorded", suffix: "" },
+  { value: 15, label: "Inspiring guests", suffix: "" },
   { value: 7, label: "Countries represented", suffix: "" },
-  { value: 1, label: "Cohort, infinite stories", suffix: "" },
+  { value: 53, label: "% women on the show", suffix: "%" },
 ];
 
 export function Impact() {
