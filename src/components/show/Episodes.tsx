@@ -188,6 +188,7 @@ const episodes: Episode[] = [
     location: "Bhuj, Gujarat, India",
     blurb:
       "Wearing many hats across Web3 — from ambassador to mentor to contributor.",
+    image: mahima,
     youtube: "#",
     linkedin: "https://www.linkedin.com/in/mahima-thacker-b696b1217/",
     twitter: "https://x.com/mahima_thacker",
