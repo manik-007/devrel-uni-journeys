@@ -79,9 +79,9 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.45 }}
           className="mt-14 flex items-center justify-center gap-8 text-sm text-muted-foreground"
         >
-          <Stat label="Episodes" value="13" />
+          <Stat label="Episodes" value="15" />
           <span className="h-8 w-px bg-border" />
-          <Stat label="Guests" value="13" />
+          <Stat label="Guests" value="15" />
           <span className="h-8 w-px bg-border" />
           <Stat label="Countries" value="7" />
         </motion.div>

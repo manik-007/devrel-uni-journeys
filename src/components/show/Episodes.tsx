@@ -13,6 +13,7 @@ import parul from "@/assets/guests/parul.jpg";
 import hardik from "@/assets/guests/hardik.jpg";
 import kevin from "@/assets/guests/kevin.jpg";
 import hilina from "@/assets/guests/hilina.jpg";
+import gopika from "@/assets/guests/gopika.jpg";
 
 type Episode = {
   number: string;
@@ -43,7 +44,7 @@ const episodes: Episode[] = [
     number: "02",
     name: "Lupe Canaviri Maydana",
     role: "Ex-Frontend Engineer @ Microsoft · Community Builder",
-    location: "Seattle, Washington",
+    location: "Seattle, Washington, USA",
     blurb:
       "Filmmaker, gymnast, and educator teaching the women of Bolivia about crypto — a truly meaningful conversation.",
     image: lupe,
@@ -93,14 +94,14 @@ const episodes: Episode[] = [
     blurb:
       "Connecting policy, peace and tech across continents from her base in Berlin.",
     image: yerang,
-    youtube: "#",
+    youtube: "https://youtu.be/K2SGlXTVerI?si=wftbjr1dU1wyTCUZ",
     linkedin: "https://www.linkedin.com/in/yerang-kim/",
   },
   {
     number: "07",
     name: "Alex Stoicescu",
     role: "Advisor @ Claimr · Ex-Communications Lead @ Request Network",
-    location: "Berlin Metropolitan Area",
+    location: "Berlin, Germany",
     blurb:
       "A storyteller who shapes how Web3 brands talk to the world.",
     image: alex,
@@ -159,7 +160,7 @@ const episodes: Episode[] = [
     number: "12",
     name: "Kevin Raúl Padilla Islas",
     role: "CTO @ EVVM · Core Team @ Her DAO Mexico",
-    location: "Puebla Metropolitan Area",
+    location: "Puebla, Mexico",
     blurb:
       "Building protocols and lifting up the next generation of women in Web3 in Mexico.",
     image: kevin,
@@ -178,6 +179,29 @@ const episodes: Episode[] = [
     youtube: "#",
     linkedin: "https://www.linkedin.com/in/purple-zhang-7b0673180/",
     twitter: "https://x.com/ziyinlox",
+  },
+  {
+    number: "14",
+    name: "Mahima Thacker",
+    role: "SheFi 11 · Ambassador @ Cyfrin & H.E.R. DAO · Mentor @ Dev3Pack & ETHGlobal",
+    location: "Bhuj, Gujarat, India",
+    blurb:
+      "Wearing many hats across Web3 — from ambassador to mentor to contributor.",
+    youtube: "#",
+    linkedin: "https://www.linkedin.com/in/mahima-thacker-b696b1217/",
+    twitter: "https://x.com/mahima_thacker",
+  },
+  {
+    number: "15",
+    name: "Gopika Chauhan",
+    role: "Builder · Community Contributor · DevRel Uni Cohort 7",
+    location: "Karnal, Haryana, India",
+    blurb:
+      "Championing access to Web3 for developers beyond the usual metros.",
+    image: gopika,
+    youtube: "#",
+    linkedin: "https://www.linkedin.com/in/gopika-chauhan18/",
+    twitter: "https://x.com/okgopika",
   },
 ];
 
@@ -208,7 +232,7 @@ export function Episodes() {
             </h2>
           </div>
           <p className="text-muted-foreground max-w-sm">
-            Thirteen episodes, thirteen perspectives, thirteen different
+            Fifteen episodes, fifteen perspectives, fifteen different
             corners of the DevRel world.
           </p>
         </div>
