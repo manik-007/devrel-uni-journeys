@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/show/Header";
 import { Hero } from "@/components/show/Hero";
 import { Story } from "@/components/show/Story";
+import { Summaries } from "@/components/show/Summaries";
 import { Episodes } from "@/components/show/Episodes";
 import { Impact } from "@/components/show/Impact";
 import { Footer } from "@/components/show/Footer";
@@ -9,11 +10,11 @@ import { Footer } from "@/components/show/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "The DevRel Uni Show — Meaningful Conversations with Cohort 7" },
+      { title: "The DevRel Uni Show" },
       {
         name: "description",
         content:
-          "A mini-podcast featuring the people behind DevRel Uni Cohort 7. Three episodes, three guests, two countries — and counting.",
+          "A mini-podcast featuring the people behind DevRel Uni Cohort 7.",
       },
       { property: "og:title", content: "The DevRel Uni Show" },
       {
@@ -29,11 +30,12 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background text-foreground antialiased scroll-smooth">
+    <div className="min-h-screen text-foreground antialiased scroll-smooth">
       <Header />
       <main>
         <Hero />
         <Story />
+        <Summaries />
         <Episodes />
         <Impact />
       </main>

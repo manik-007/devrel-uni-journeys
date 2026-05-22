@@ -13,6 +13,7 @@ import parul from "@/assets/guests/parul.jpg";
 import hardik from "@/assets/guests/hardik.jpg";
 import kevin from "@/assets/guests/kevin.jpg";
 import hilina from "@/assets/guests/hilina.jpg";
+import gopika from "@/assets/guests/gopika.jpg";
 
 type Episode = {
   number: string;
