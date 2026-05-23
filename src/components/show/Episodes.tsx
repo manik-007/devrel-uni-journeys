@@ -106,7 +106,7 @@ const episodes: Episode[] = [
     blurb:
       "A storyteller who shapes how Web3 brands talk to the world.",
     image: alex,
-    youtube: "#",
+    youtube: "https://youtu.be/GFregk6dRA0",
     linkedin: "https://www.linkedin.com/in/alexstoicescu/",
     twitter: "https://x.com/st0icescu",
   },
@@ -124,6 +124,18 @@ const episodes: Episode[] = [
   },
   {
     number: "09",
+    name: "Purple Zhang",
+    role: "Developer Relations @ SECBIT Labs · Prev Antalpha, SocialWiki",
+    location: "Suzhou, Jiangsu, China",
+    blurb:
+      "Bridging developer ecosystems across Asia with a love for community-driven Web3.",
+    image: purple,
+    youtube: "#",
+    linkedin: "https://www.linkedin.com/in/purple-zhang-7b0673180/",
+    twitter: "https://x.com/ziyinlox",
+  },
+  {
+    number: "10",
     name: "Parul Yadav",
     role: "DevRel @ Kleros · Ex-Nethermind · Ex-Accenture",
     location: "India",
@@ -134,7 +146,7 @@ const episodes: Episode[] = [
     linkedin: "https://www.linkedin.com/in/parulyadav18/",
   },
   {
-    number: "10",
+    number: "11",
     name: "Hardik Bandhiya",
     role: "AWS Campus Leader · Member @ DevRel Uni",
     location: "Junagarh, Gujarat, India",
@@ -146,7 +158,7 @@ const episodes: Episode[] = [
     twitter: "https://x.com/bandhiyahardik8",
   },
   {
-    number: "11",
+    number: "12",
     name: "Hilina Damte",
     role: "Partner @ PayWay · Co-Founder @ mereb.dev · Advisor @ P3 Smart City",
     location: "Addis Ababa, Ethiopia",
@@ -158,7 +170,7 @@ const episodes: Episode[] = [
     youtube: "#",
   },
   {
-    number: "12",
+    number: "13",
     name: "Kevin Raúl Padilla Islas",
     role: "CTO @ EVVM · Core Team @ Her DAO Mexico",
     location: "Puebla, Mexico",
@@ -168,18 +180,6 @@ const episodes: Episode[] = [
     youtube: "#",
     linkedin: "https://www.linkedin.com/in/kevin-padilla-islas/",
     twitter: "https://x.com/jistro",
-  },
-  {
-    number: "13",
-    name: "Purple Zhang",
-    role: "Developer Relations @ SECBIT Labs · Prev Antalpha, SocialWiki",
-    location: "Suzhou, Jiangsu, China",
-    blurb:
-      "Bridging developer ecosystems across Asia with a love for community-driven Web3.",
-    image: purple,
-    youtube: "#",
-    linkedin: "https://www.linkedin.com/in/purple-zhang-7b0673180/",
-    twitter: "https://x.com/ziyinlox",
   },
   {
     number: "14",
