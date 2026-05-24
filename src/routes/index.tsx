@@ -36,11 +36,12 @@ function Index() {
       <main>
         <Hero />
         <Story />
-        <Summaries />
         <Episodes />
+        <Summaries />
         <Impact />
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
