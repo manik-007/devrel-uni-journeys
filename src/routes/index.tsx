@@ -6,6 +6,7 @@ import { Summaries } from "@/components/show/Summaries";
 import { Episodes } from "@/components/show/Episodes";
 import { Impact } from "@/components/show/Impact";
 import { Footer } from "@/components/show/Footer";
+import { ScrollToTop } from "@/components/show/ScrollToTop";
 
 export const Route = createFileRoute("/")({
   head: () => ({
