@@ -47,12 +47,12 @@ export function Impact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="rounded-2xl border border-border bg-card p-6 hover:bg-secondary transition-colors"
+              className="rounded-2xl border border-border bg-card p-5 sm:p-6 hover:bg-secondary transition-colors"
             >
-              <div className="text-5xl md:text-6xl font-black text-primary tracking-tight">
+              <div className="text-3xl sm:text-5xl md:text-6xl font-black text-primary tracking-tight break-all">
                 <Counter to={s.value} suffix={s.suffix} />
               </div>
-              <div className="mt-3 text-sm text-muted-foreground">{s.label}</div>
+              <div className="mt-3 text-xs sm:text-sm text-muted-foreground">{s.label}</div>
             </motion.div>
           ))}
         </div>
