@@ -18,10 +18,9 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 }
 
 const stats = [
-  { value: 15, label: "Episodes recorded", suffix: "" },
-  { value: 15, label: "Inspiring guests", suffix: "" },
-  { value: 7, label: "Countries represented", suffix: "" },
-  { value: 53, label: "% women on the show", suffix: "%" },
+  { value: 17, label: "Episodes recorded", suffix: "" },
+  { value: 17, label: "Inspiring guests", suffix: "" },
+  { value: 8, label: "Countries represented", suffix: "" },
 ];
 
 export function Impact() {
@@ -39,7 +38,7 @@ export function Impact() {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="mt-12 grid grid-cols-3 gap-3 sm:gap-4">
           {stats.map((s, i) => (
             <motion.div
               key={s.label}
@@ -47,9 +46,9 @@ export function Impact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="rounded-2xl border border-border bg-card p-5 sm:p-6 hover:bg-secondary transition-colors"
+              className="rounded-2xl border border-border bg-card p-4 sm:p-6 hover:bg-secondary transition-colors"
             >
-              <div className="text-3xl sm:text-5xl md:text-6xl font-black text-primary tracking-tight break-all">
+              <div className="text-4xl sm:text-5xl md:text-6xl font-black text-primary tracking-tight leading-none">
                 <Counter to={s.value} suffix={s.suffix} />
               </div>
               <div className="mt-3 text-xs sm:text-sm text-muted-foreground">{s.label}</div>

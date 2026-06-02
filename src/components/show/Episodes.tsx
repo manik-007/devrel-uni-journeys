@@ -15,6 +15,8 @@ import kevin from "@/assets/guests/kevin.jpg";
 import hilina from "@/assets/guests/hilina.jpg";
 import gopika from "@/assets/guests/gopika.jpg";
 import mahima from "@/assets/guests/mahima.jpg";
+import akhil from "@/assets/guests/akhil.jpg";
+import henry from "@/assets/guests/henry.jpg";
 
 type Episode = {
   number: string;
@@ -205,6 +207,29 @@ const episodes: Episode[] = [
     linkedin: "https://www.linkedin.com/in/gopika-chauhan18/",
     twitter: "https://x.com/okgopika",
   },
+  {
+    number: "16",
+    name: "Akhil Nanavati",
+    role: "Builder · Web3 Contributor",
+    location: "Mumbai, India",
+    blurb:
+      "Shipping in public from Mumbai — a candid look at building in Web3.",
+    image: akhil,
+    youtube: "https://youtu.be/AxswgAe0btA",
+    linkedin: "https://www.linkedin.com/in/akhil-nanavati-386867190/",
+    twitter: "https://x.com/akhilnanavati",
+  },
+  {
+    number: "17",
+    name: "Henry Tong",
+    role: "Web3 Builder · Community Contributor",
+    location: "Mendoza, Argentina",
+    blurb:
+      "Bringing a Latin American perspective to the global DevRel conversation.",
+    image: henry,
+    youtube: "https://youtu.be/mSo_lbOCP1Y",
+    linkedin: "https://www.linkedin.com/in/henry-tong-info/",
+  },
 ];
 
 function Initials({ name }: { name: string }) {
@@ -234,7 +259,7 @@ export function Episodes() {
             </h2>
           </div>
           <p className="text-muted-foreground max-w-sm">
-            Fifteen episodes, fifteen perspectives, fifteen different
+            Seventeen episodes, seventeen perspectives, seventeen different
             corners of the DevRel world.
           </p>
         </div>
