@@ -1,6 +1,6 @@
 import { Suspense, useRef, useState, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Html } from "@react-three/drei";
+import { OrbitControls, Html, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 import { Linkedin, Twitter, MapPin } from "lucide-react";
 
@@ -65,42 +65,33 @@ function latLngToVec3(lat: number, lng: number, r = RADIUS) {
 }
 
 function GlobeSurface() {
-  // Generate a grid of small dots across the sphere for the classic "dotted globe" look
-  const dots = useMemo(() => {
-    const points: THREE.Vector3[] = [];
-    const step = 6; // degrees
-    for (let lat = -90; lat <= 90; lat += step) {
-      const circumference = Math.cos((lat * Math.PI) / 180);
-      const count = Math.max(1, Math.round((360 / step) * circumference));
-      for (let i = 0; i < count; i++) {
-        const lng = (i / count) * 360 - 180;
-        points.push(latLngToVec3(lat, lng, RADIUS * 1.001));
-      }
-    }
-    return points;
-  }, []);
-
-  const geometry = useMemo(() => {
-    const g = new THREE.BufferGeometry();
-    const positions = new Float32Array(dots.length * 3);
-    dots.forEach((p, i) => {
-      positions[i * 3] = p.x;
-      positions[i * 3 + 1] = p.y;
-      positions[i * 3 + 2] = p.z;
-    });
-    g.setAttribute("position", new THREE.BufferAttribute(positions, 3));
-    return g;
-  }, [dots]);
+  // World map texture so users can identify each country.
+  const earthTexture = useTexture(
+    "https://unpkg.com/three-globe/example/img/earth-dark.jpg"
+  );
 
   return (
     <>
       <mesh>
         <sphereGeometry args={[RADIUS, 64, 64]} />
-        <meshPhongMaterial color="#0a1a12" transparent opacity={0.85} shininess={5} />
+        <meshStandardMaterial
+          map={earthTexture}
+          emissive={new THREE.Color("#0a3d24")}
+          emissiveIntensity={0.35}
+          roughness={1}
+          metalness={0}
+        />
       </mesh>
-      <points geometry={geometry}>
-        <pointsMaterial color="#39d98a" size={0.025} sizeAttenuation transparent opacity={0.55} />
-      </points>
+      {/* Subtle atmosphere glow */}
+      <mesh>
+        <sphereGeometry args={[RADIUS * 1.03, 64, 64]} />
+        <meshBasicMaterial
+          color="#39d98a"
+          transparent
+          opacity={0.06}
+          side={THREE.BackSide}
+        />
+      </mesh>
     </>
   );
 }
@@ -237,7 +228,7 @@ export function GlobeMembers() {
             The map of our guests
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Drag to rotate. Hover a glowing dot to meet the person behind it.
+            Spin the world map. Hover a glowing pin to meet the guest who calls that country home.
           </p>
         </div>
 
