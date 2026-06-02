@@ -254,7 +254,7 @@ export function GlobeMembers() {
               />
             </Suspense>
           </Canvas>
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_55%,hsl(var(--background))_100%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_55%,var(--background)_100%)]" />
         </div>
       </div>
     </section>
