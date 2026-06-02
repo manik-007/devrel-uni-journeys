@@ -228,7 +228,7 @@ export function GlobeMembers() {
             The map of our guests
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Drag to rotate. Hover a glowing dot to meet the person behind it.
+            Spin the world map. Hover a glowing pin to meet the guest who calls that country home.
           </p>
         </div>
 
