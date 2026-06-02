@@ -7,6 +7,7 @@ import { Episodes } from "@/components/show/Episodes";
 import { Impact } from "@/components/show/Impact";
 import { Footer } from "@/components/show/Footer";
 import { ScrollToTop } from "@/components/show/ScrollToTop";
+import { GlobeMembers } from "@/components/show/GlobeMembers";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -37,6 +38,7 @@ function Index() {
         <Hero />
         <Story />
         <Episodes />
+        <GlobeMembers />
         <Summaries />
         <Impact />
       </main>
