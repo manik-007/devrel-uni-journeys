@@ -161,18 +161,6 @@ const episodes: Episode[] = [
   },
   {
     number: "12",
-    name: "Hilina Damte",
-    role: "Partner @ PayWay · Co-Founder @ mereb.dev · Advisor @ P3 Smart City",
-    location: "Addis Ababa, Ethiopia",
-    blurb:
-      "Driving Web3 adoption and smart-city innovation across East Africa.",
-    image: hilina,
-    linkedin: "https://www.linkedin.com/in/hilina-damte-532751158/",
-    twitter: "https://x.com/decentralizeEA",
-    youtube: "#",
-  },
-  {
-    number: "13",
     name: "Kevin Raúl Padilla Islas",
     role: "CTO @ EVVM · Core Team @ Her DAO Mexico",
     location: "Puebla, Mexico",
@@ -184,19 +172,7 @@ const episodes: Episode[] = [
     twitter: "https://x.com/jistro",
   },
   {
-    number: "14",
-    name: "Mahima Thacker",
-    role: "SheFi 11 · Ambassador @ Cyfrin & H.E.R. DAO · Mentor @ Dev3Pack & ETHGlobal",
-    location: "Bhuj, Gujarat, India",
-    blurb:
-      "Wearing many hats across Web3 — from ambassador to mentor to contributor.",
-    image: mahima,
-    youtube: "#",
-    linkedin: "https://www.linkedin.com/in/mahima-thacker-b696b1217/",
-    twitter: "https://x.com/mahima_thacker",
-  },
-  {
-    number: "15",
+    number: "13",
     name: "Gopika Chauhan",
     role: "Builder · Community Contributor · DevRel Uni Cohort 7",
     location: "Karnal, Haryana, India",
@@ -208,7 +184,18 @@ const episodes: Episode[] = [
     twitter: "https://x.com/okgopika",
   },
   {
-    number: "16",
+    number: "14",
+    name: "Henry Tong",
+    role: "Web3 Builder · Community Contributor",
+    location: "Mendoza, Argentina",
+    blurb:
+      "Bringing a Latin American perspective to the global DevRel conversation.",
+    image: henry,
+    youtube: "https://youtu.be/mSo_lbOCP1Y",
+    linkedin: "https://www.linkedin.com/in/henry-tong-info/",
+  },
+  {
+    number: "15",
     name: "Akhil Nanavati",
     role: "Builder · Web3 Contributor",
     location: "Mumbai, India",
@@ -220,15 +207,28 @@ const episodes: Episode[] = [
     twitter: "https://x.com/akhilnanavati",
   },
   {
-    number: "17",
-    name: "Henry Tong",
-    role: "Web3 Builder · Community Contributor",
-    location: "Mendoza, Argentina",
+    number: "16",
+    name: "Hilina Damte",
+    role: "Partner @ PayWay · Co-Founder @ mereb.dev · Advisor @ P3 Smart City",
+    location: "Addis Ababa, Ethiopia",
     blurb:
-      "Bringing a Latin American perspective to the global DevRel conversation.",
-    image: henry,
-    youtube: "https://youtu.be/mSo_lbOCP1Y",
-    linkedin: "https://www.linkedin.com/in/henry-tong-info/",
+      "Driving Web3 adoption and smart-city innovation across East Africa.",
+    image: hilina,
+    linkedin: "https://www.linkedin.com/in/hilina-damte-532751158/",
+    twitter: "https://x.com/decentralizeEA",
+    youtube: "#",
+  },
+  {
+    number: "17",
+    name: "Mahima Thacker",
+    role: "SheFi 11 · Ambassador @ Cyfrin & H.E.R. DAO · Mentor @ Dev3Pack & ETHGlobal",
+    location: "Bhuj, Gujarat, India",
+    blurb:
+      "Wearing many hats across Web3 — from ambassador to mentor to contributor.",
+    image: mahima,
+    youtube: "#",
+    linkedin: "https://www.linkedin.com/in/mahima-thacker-b696b1217/",
+    twitter: "https://x.com/mahima_thacker",
   },
 ];
 
