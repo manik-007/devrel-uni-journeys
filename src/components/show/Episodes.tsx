@@ -259,7 +259,7 @@ export function Episodes() {
             </h2>
           </div>
           <p className="text-muted-foreground max-w-sm">
-            Fifteen episodes, fifteen perspectives, fifteen different
+            Seventeen episodes, seventeen perspectives, seventeen different
             corners of the DevRel world.
           </p>
         </div>
