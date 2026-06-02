@@ -1,6 +1,6 @@
 import { Suspense, useRef, useState, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Html } from "@react-three/drei";
+import { OrbitControls, Html, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 import { Linkedin, Twitter, MapPin } from "lucide-react";
 
