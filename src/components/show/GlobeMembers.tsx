@@ -65,9 +65,9 @@ function latLngToVec3(lat: number, lng: number, r = RADIUS) {
 }
 
 function GlobeSurface() {
-  // World map texture so users can identify each country.
+  // Lighter world map texture so users can clearly identify each country.
   const earthTexture = useTexture(
-    "https://unpkg.com/three-globe/example/img/earth-dark.jpg"
+    "https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
   );
 
   return (
@@ -76,9 +76,9 @@ function GlobeSurface() {
         <sphereGeometry args={[RADIUS, 64, 64]} />
         <meshStandardMaterial
           map={earthTexture}
-          emissive={new THREE.Color("#0a3d24")}
-          emissiveIntensity={0.35}
-          roughness={1}
+          emissive={new THREE.Color("#cfeede")}
+          emissiveIntensity={0.22}
+          roughness={0.8}
           metalness={0}
         />
       </mesh>
@@ -86,9 +86,9 @@ function GlobeSurface() {
       <mesh>
         <sphereGeometry args={[RADIUS * 1.03, 64, 64]} />
         <meshBasicMaterial
-          color="#39d98a"
+          color="#7cffb4"
           transparent
-          opacity={0.06}
+          opacity={0.08}
           side={THREE.BackSide}
         />
       </mesh>
@@ -166,8 +166,8 @@ function Scene({
 
   return (
     <>
-      <ambientLight intensity={0.7} />
-      <directionalLight position={[5, 3, 5]} intensity={0.8} />
+      <ambientLight intensity={1.1} />
+      <directionalLight position={[5, 3, 5]} intensity={1.1} />
       <group ref={groupRef}>
         <GlobeSurface />
         {members.map((m) => (
