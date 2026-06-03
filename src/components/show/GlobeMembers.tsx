@@ -73,8 +73,7 @@ function GlobeSurface() {
 
   useEffect(() => {
     if (earthTexture) {
-      // @ts-expect-error newer three uses colorSpace
-      earthTexture.colorSpace = THREE.SRGBColorSpace ?? earthTexture.colorSpace;
+      (earthTexture as THREE.Texture).colorSpace = THREE.SRGBColorSpace;
       earthTexture.anisotropy = 8;
       earthTexture.needsUpdate = true;
     }
