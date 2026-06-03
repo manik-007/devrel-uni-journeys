@@ -166,8 +166,8 @@ function Scene({
 
   return (
     <>
-      <ambientLight intensity={0.7} />
-      <directionalLight position={[5, 3, 5]} intensity={0.8} />
+      <ambientLight intensity={1.1} />
+      <directionalLight position={[5, 3, 5]} intensity={1.1} />
       <group ref={groupRef}>
         <GlobeSurface />
         {members.map((m) => (
