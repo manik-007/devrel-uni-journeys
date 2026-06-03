@@ -1,8 +1,8 @@
-import { Suspense, useRef, useState, useMemo } from "react";
+import { Suspense, useRef, useState, useMemo, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Html, useTexture } from "@react-three/drei";
 import * as THREE from "three";
-import { Linkedin, Twitter, MapPin } from "lucide-react";
+import { Linkedin, Twitter, MapPin, X } from "lucide-react";
 
 import asilbek from "@/assets/guests/asilbek.jpg";
 import lupe from "@/assets/guests/lupe.jpg";
@@ -54,6 +54,8 @@ const members: Member[] = [
 ];
 
 const RADIUS = 2;
+const DOT_COLOR = "#0f6b3a";
+const DOT_ACTIVE_COLOR = "#15a04f";
 
 function latLngToVec3(lat: number, lng: number, r = RADIUS) {
   const phi = (90 - lat) * (Math.PI / 180);
@@ -65,10 +67,17 @@ function latLngToVec3(lat: number, lng: number, r = RADIUS) {
 }
 
 function GlobeSurface() {
-  // Lighter world map texture so users can clearly identify each country.
   const earthTexture = useTexture(
     "https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
   );
+
+  useEffect(() => {
+    if (earthTexture) {
+      (earthTexture as THREE.Texture).colorSpace = THREE.SRGBColorSpace;
+      earthTexture.anisotropy = 8;
+      earthTexture.needsUpdate = true;
+    }
+  }, [earthTexture]);
 
   return (
     <>
@@ -76,19 +85,19 @@ function GlobeSurface() {
         <sphereGeometry args={[RADIUS, 64, 64]} />
         <meshStandardMaterial
           map={earthTexture}
-          emissive={new THREE.Color("#cfeede")}
-          emissiveIntensity={0.22}
-          roughness={0.8}
-          metalness={0}
+          emissive={new THREE.Color("#ffffff")}
+          emissiveMap={earthTexture}
+          emissiveIntensity={0.35}
+          roughness={0.65}
+          metalness={0.05}
         />
       </mesh>
-      {/* Subtle atmosphere glow */}
       <mesh>
         <sphereGeometry args={[RADIUS * 1.03, 64, 64]} />
         <meshBasicMaterial
           color="#7cffb4"
           transparent
-          opacity={0.08}
+          opacity={0.07}
           side={THREE.BackSide}
         />
       </mesh>
@@ -98,13 +107,11 @@ function GlobeSurface() {
 
 function MemberDot({
   member,
-  onHover,
-  onLeave,
+  onSelect,
   isActive,
 }: {
   member: Member;
-  onHover: (m: Member) => void;
-  onLeave: () => void;
+  onSelect: (m: Member) => void;
   isActive: boolean;
 }) {
   const pos = useMemo(() => latLngToVec3(member.lat, member.lng, RADIUS * 1.015), [member]);
@@ -117,33 +124,33 @@ function MemberDot({
     }
   });
 
-  // Orient pin outward
   const quat = useMemo(() => {
     const up = new THREE.Vector3(0, 1, 0);
     const dir = pos.clone().normalize();
-    const q = new THREE.Quaternion().setFromUnitVectors(up, dir);
-    return q;
+    return new THREE.Quaternion().setFromUnitVectors(up, dir);
   }, [pos]);
 
   return (
     <group position={pos} quaternion={quat}>
       <mesh
+        onClick={(e) => {
+          e.stopPropagation();
+          onSelect(member);
+        }}
         onPointerOver={(e) => {
           e.stopPropagation();
-          onHover(member);
           document.body.style.cursor = "pointer";
         }}
         onPointerOut={() => {
-          onLeave();
           document.body.style.cursor = "";
         }}
       >
-        <sphereGeometry args={[0.045, 16, 16]} />
-        <meshBasicMaterial color={isActive ? "#7cffb4" : "#39d98a"} />
+        <sphereGeometry args={[0.05, 16, 16]} />
+        <meshBasicMaterial color={isActive ? DOT_ACTIVE_COLOR : DOT_COLOR} />
       </mesh>
       <mesh ref={ringRef} rotation={[Math.PI / 2, 0, 0]}>
-        <ringGeometry args={[0.07, 0.09, 24]} />
-        <meshBasicMaterial color="#39d98a" transparent opacity={0.6} side={THREE.DoubleSide} />
+        <ringGeometry args={[0.07, 0.1, 24]} />
+        <meshBasicMaterial color={DOT_ACTIVE_COLOR} transparent opacity={0.75} side={THREE.DoubleSide} />
       </mesh>
     </group>
   );
@@ -166,28 +173,35 @@ function Scene({
 
   return (
     <>
-      <ambientLight intensity={1.1} />
-      <directionalLight position={[5, 3, 5]} intensity={1.1} />
+      <ambientLight intensity={1.4} />
+      <directionalLight position={[5, 3, 5]} intensity={1.6} />
+      <directionalLight position={[-5, -2, -3]} intensity={0.4} />
       <group ref={groupRef}>
         <GlobeSurface />
         {members.map((m) => (
           <MemberDot
             key={m.name}
             member={m}
-            onHover={setActive}
-            onLeave={() => setActive(null)}
+            onSelect={setActive}
             isActive={active?.name === m.name}
           />
         ))}
         {active && (
           <Html
-            position={latLngToVec3(active.lat, active.lng, RADIUS * 1.2)}
+            position={latLngToVec3(active.lat, active.lng, RADIUS * 1.25)}
             center
             distanceFactor={6}
             zIndexRange={[100, 0]}
             style={{ pointerEvents: "none" }}
           >
-            <div className="pointer-events-auto w-64 rounded-xl border border-primary/40 bg-card/95 backdrop-blur p-4 shadow-[var(--shadow-glow)]">
+            <div className="pointer-events-auto w-64 rounded-xl border border-primary/40 bg-card/95 backdrop-blur p-4 shadow-[var(--shadow-glow)] animate-scale-in">
+              <button
+                onClick={() => setActive(null)}
+                className="absolute top-2 right-2 text-muted-foreground hover:text-primary"
+                aria-label="Close"
+              >
+                <X className="h-3.5 w-3.5" />
+              </button>
               <div className="flex items-center gap-3">
                 <img src={active.image} alt={active.name} className="h-12 w-12 rounded-full object-cover border border-primary/40" />
                 <div className="min-w-0">
@@ -228,12 +242,16 @@ export function GlobeMembers() {
             The map of our guests
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Spin the world map. Hover a glowing pin to meet the guest who calls that country home.
+            Spin the globe and click a green pin to meet the guest who calls that country home.
           </p>
         </div>
 
         <div className="mt-12 relative rounded-2xl border border-border bg-card overflow-hidden h-[420px] sm:h-[520px] md:h-[600px]">
-          <Canvas camera={{ position: [0, 0, 5.5], fov: 45 }} dpr={[1, 2]}>
+          <Canvas
+            camera={{ position: [0, 0, 5.5], fov: 45 }}
+            dpr={[1, 2]}
+            gl={{ toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 1.25 }}
+          >
             <Suspense fallback={null}>
               <Scene active={active} setActive={setActive} />
               <OrbitControls
