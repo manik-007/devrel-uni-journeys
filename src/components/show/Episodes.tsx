@@ -286,7 +286,7 @@ export function Episodes() {
                   <Initials name={ep.name} />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
-                <span className="absolute top-4 left-4 rounded-md bg-primary px-2.5 py-1 text-xs font-bold text-primary-foreground tracking-wider">
+                <span className="absolute top-3 left-3 z-10 rounded-md bg-primary px-3 py-1.5 text-xs sm:text-sm font-extrabold text-primary-foreground tracking-wider shadow-lg ring-1 ring-primary-foreground/20">
                   EP {ep.number}
                 </span>
                 {ep.youtube !== "#" && (
