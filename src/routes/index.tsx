@@ -45,6 +45,7 @@ function Index() {
       </main>
       <Footer />
       <ScrollToTop />
+      <AccessibilityPanel />
     </div>
   );
 }
