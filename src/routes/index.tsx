@@ -8,6 +8,7 @@ import { Impact } from "@/components/show/Impact";
 import { Footer } from "@/components/show/Footer";
 import { ScrollToTop } from "@/components/show/ScrollToTop";
 import { GlobeMembers } from "@/components/show/GlobeMembers";
+import { AccessibilityPanel } from "@/components/show/AccessibilityPanel";
 
 export const Route = createFileRoute("/")({
   head: () => ({
