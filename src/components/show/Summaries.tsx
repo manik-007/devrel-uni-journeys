@@ -141,6 +141,28 @@ const summaries: Summary[] = [
       "Warns new community leads against overrelying on AI, urging them to lead from the front and treat members like family.",
     ],
   },
+  {
+    number: "13",
+    name: "Gopika Chauhan",
+    takeaway:
+      "Self guided learning, honest applications, and consistent preparation can turn early uncertainty into real opportunity.",
+    bullets: [
+      "Started with no mentors after entering IIT Mandi, then built her own learning system through research, LinkedIn, Twitter, and conversations with people already working in tech.",
+      "Explored development, cloud, AI, generative AI, and Web3 while balancing academics, fellowships, internships, hostel leadership, and student communities through planning and delegation.",
+      "Her advice for Web3 and AI is to ask for help, understand the architecture behind generated code, debug failures yourself, and prepare deeply before applying to programs like Dev3 University, Uniswap Hook Incubator, and ETH New York.",
+    ],
+  },
+  {
+    number: "14",
+    name: "Henry Tong",
+    takeaway:
+      "People matter more than technology. Understand the problem first, document the why, and keep learning with curiosity.",
+    bullets: [
+      "With more than twenty five years in software, Henry has seen AI become the biggest recent shift, but he frames it as a tool that works best when humans stay behind the wheel.",
+      "His technical lead experience taught him that durable software depends on communication, mentorship, self care, and documentation that explains both what the code does and why decisions were made.",
+      "He urges young engineers to focus on real problems before tools, include non developers in tech communities, question assumptions, stay adaptable, and use technology for meaningful social good.",
+    ],
+  },
 ];
 
 export function Summaries() {
